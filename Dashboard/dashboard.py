@@ -10,7 +10,7 @@ palette = ["#682F2F", "#9E726F", "#D6B2B1", "#B9C0C9", "#9F8A78", "#F3AB60","#84
 st.title("Air Quality Public Dataset")
 st.write("**Dashboard for analyzing Air Quality Public Dataset**")
 
-all_data = pd.read_csv("https://raw.githubusercontent.com/sunindadimas/Latihan_Analisis/main/Dashboard/main_data.csv")
+all_data = pd.read_csv("https://raw.githubusercontent.com/sunindadimas/analisisdatadicoding/main/Dashboard/main_data.csv")
 
 pal = ["#FF0000", "#FFFF00", "#008000", "#FF0000", "#FFFF00", "#008000", "#FF0000", "#FFFF00", "#008000", "#FF0000", "#FFFF00", "#008000", "#FF0000", "#FFFF00", "#008000"]
 
