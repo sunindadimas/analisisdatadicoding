@@ -46,7 +46,7 @@ st.write(text_perkembangan)
 yearly_means = all_data.groupby("year")[["PM2.5", "PM10", "SO2", "NO2", "O3"]].mean()
 plt.figure(figsize=(10, 6))
 for i, feature in enumerate(yearly_means.columns):
-    plt.plot(yearly_means.index, yearly_means[feature], label=feature, marker='o', color=palette[i])
+    plt.plot(yearly_means.index, yearly_means[feature], label=feature, marker='o', color=pal[i])
 plt.xlabel('Tahun', labelpad=10, fontsize=13)
 plt.ylabel('Indeks', labelpad=10, fontsize=13)
 plt.title('Tren Perkembangan Polutan', fontsize=20, pad=20, fontweight='bold')
@@ -71,7 +71,7 @@ st.write("**2. Bagaimana dengan kualitas udara pada waktu malam hari apakah baik
 
 waktu_means = all_data.groupby("Waktu")["Kualitas"].mean()
 plt.figure(figsize=(10, 6))
-waktu_means.plot(kind="bar", stacked=False, color=palette)
+waktu_means.plot(kind="bar", stacked=False, color=pal)
 plt.xlabel('Waktu', labelpad=10, fontsize=13)
 plt.ylabel('Indeks', labelpad=10, fontsize=13)
 plt.title('Kualitas Udara Pagi & Malam', fontsize=20, pad=20, fontweight='bold')
@@ -84,7 +84,7 @@ st.write("**Pada malam hari kualitas udara kurang baik, maka kuarangi untuk mela
 
 waktu_means = all_data.groupby("Waktu")[["PM10", "PM2.5", "NO2", "O3", "SO2"]].mean()
 plt.figure(figsize=(10, 6))
-waktu_means.plot(kind="bar", stacked=False, color=palette)
+waktu_means.plot(kind="bar", stacked=False, color=pal)
 plt.xlabel('Waktu', labelpad=10, fontsize=13)
 plt.ylabel('Indeks', labelpad=10, fontsize=13)
 plt.title('Molekul Polutan Pagi & Malam', fontsize=20, pad=20, fontweight='bold')
